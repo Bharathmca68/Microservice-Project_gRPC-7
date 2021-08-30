@@ -24,7 +24,6 @@ async function bootstrap() {
   app.use(helmet({ crossOriginOpenerPolicy: true }));          // does not share a browsing context group with cross-origin documents
   app.use(helmet({ originAgentCluster: true }));               // allow web applications to isolate their origins
 
-
   await app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.GRPC,
     options: {

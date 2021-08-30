@@ -1,4 +1,4 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { GrpcMethod } from '@nestjs/microservices';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -23,11 +23,11 @@ export class SubscribersService {
 
 
     @GrpcMethod()
+    @Get('subscribers')
     async getAllSubscribers() {
         const data = await this.subscribersModel.find();
         return {
             data
         }
     }
-
 }

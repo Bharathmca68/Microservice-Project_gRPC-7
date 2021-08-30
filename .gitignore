@@ -1,7 +1,7 @@
-/admin-server/node_modules
-/admin-server/dist
-/admin-server/.env
-/admin-server/package-lock.json
+/api-gateway/node_modules
+/api-gateway/dist
+/api-gateway/.env
+/api-gateway/package-lock.json
 
 /microservice/node_modules
 /microservice/dist
